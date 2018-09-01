@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/OriginalBW5Project/AutomatedProcesses/MessageTransformation/CheckMessage-End-Output.xsd" xmlns:ns="http://www.tibco.com/pe/DeployedVarsType" xmlns:ns2="http://www.tibco.com/pe/GenerateErrorActivity/InputSchema" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/OriginalBW5Project/AutomatedProcesses/MessageTransformation/CheckMessage-End-Output.xsd">
+    <xsd:element name="Request">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="xmlRequest" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="localConfNbr" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="whgConfNbr" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="CCN" type="xsd:string"/>
+                <xsd:element name="msgType" type="xsd:string"/>
+                <xsd:element name="msgTypeCode" type="xsd:string"/>
+                <xsd:element name="msgPriority" type="xsd:int"/>
+                <xsd:element minOccurs="0" name="Action" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

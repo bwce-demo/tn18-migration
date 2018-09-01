@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="packages.fidelio.3.0" xmlns="packages.fidelio.3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Package" type = "Package">
+		<xs:annotation>
+			<xs:documentation>Package schema</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Package">
+		<xs:sequence>
+			<xs:element name="hotelCode" type="xs:string"/>
+			<xs:element name="chainCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="packageCode" type="xs:string"/>
+			<xs:element name="packageDescription" type="xs:string"/>
+			<xs:element name="shortDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="forecastGroup" type="xs:string" minOccurs="0"/>
+			<xs:element name="packageList" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="printSeperately" type="xs:boolean"/>
+			<xs:element name="addToRate" type="xs:boolean"/>
+			<xs:element name="departmentCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="customPostingRhythm" type="xs:string" minOccurs="0"/>
+			<xs:element name="alternateDepartmentCodes" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="exchangeRateDepartmentCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="price" type="fixed144" minOccurs="0"/>
+			<xs:element name="posAllowance" type="fixed144" minOccurs="0"/>
+			<xs:element name="taxTransactionCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="taxIncluded" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="overageDepartmentCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="overageTaxIncluded" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="allowance" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="profitDepartmentCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="lossDepartmentCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="currencyCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="sellSeparate" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="postNextDay" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="validFromTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="validToTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="formula" type="xs:string" minOccurs="0"/>
+			<xs:element name="PostingRhythmAttributes" type="PostingRhythmAttributes" minOccurs="0"/>
+			<xs:element name="PackageDetails" type="PackageDetails" minOccurs="0"/>
+			<xs:element name="PkgInvItems" type="PkgInvItems" minOccurs="0"/>
+			<xs:element name="cateringPackage" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="redemption" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="PkgDescriptions" type="PkgDescriptions" minOccurs="0"/>
+			<xs:element name="PkgShortDescriptions" type="PkgShortDescriptions" minOccurs="0"/>
+			<xs:element name="arrangementCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="forecastNextDay" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="PackageTieredDetails" type="PackageTieredDetails" minOccurs="0"/>
+			<xs:element name="overrideFixedRate" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="beginSellDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="endSellDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="profitLossAtEOD" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="PkgLongInfos" type="PkgLongInfos" minOccurs="0"/>
+			<xs:element name="pkgMinAdvanceBookingDays" type="xs:int" minOccurs="0"/>
+			<xs:element name="InactivePackageDetails" type="InactivePackageDetails" minOccurs="0"/>
+			<xs:element name="containsInactiveDetails" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="packageAction" type="packageAction" use="optional"/>
+		<xs:attribute name="calculationRule" type="calculationRule" use="optional"/>
+		<xs:attribute name="postingRhythm" type="postingRhythm" use="optional"/>
+		<xs:attribute name="packageElement" type="packageElement" use="optional"/>
+		<xs:attribute name="addToRateMode" type="addToRateMode" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="fixed144">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="14"/>
+			<xs:fractionDigits value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="packageAction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NEW"/>
+			<xs:enumeration value="CHANGE"/>
+			<xs:enumeration value="DELETE"/>
+			<xs:enumeration value="SYNCHRONIZE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="calculationRule">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="F"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="R"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="postingRhythm">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="D"/>
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="I"/>
+			<xs:enumeration value="W"/>
+			<xs:enumeration value="V"/>
+			<xs:enumeration value="F"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="EA"/>
+			<xs:enumeration value="ED"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="packageElement">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ELEMENT"/>
+			<xs:enumeration value="GROUP"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="addToRateMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="INCLUDE"/>
+			<xs:enumeration value="SEPARATE"/>
+			<xs:enumeration value="COMBINED"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PostingRhythmAttributes">
+		<xs:sequence>
+			<xs:element name="startOnNight" type="xs:int" minOccurs="0"/>
+			<xs:element name="postAfterNights" type="xs:int" minOccurs="0"/>
+			<xs:element name="customPostingSchedule" type="xs:string" minOccurs="0"/>
+			<xs:element name="DaysOfWeek" type="DaysOfWeek" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DaysOfWeek">
+		<xs:sequence>
+			<xs:element name="monday" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="tuesday" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="wednesday" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="thursday" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="friday" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="saturday" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="sunday" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PackageDetails">
+		<xs:sequence>
+			<xs:element name="PackageDetail" type="PackageDetail" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PackageDetail">
+		<xs:sequence>
+			<xs:element name="seasonCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="startDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="endDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="price" type="fixed144" minOccurs="0"/>
+			<xs:element name="posAllowance" type="fixed144" minOccurs="0"/>
+			<xs:element name="bucket2Price" type="fixed144" minOccurs="0"/>
+			<xs:element name="bucket2Allowance" type="fixed144" minOccurs="0"/>
+			<xs:element name="bucket3Price" type="fixed144" minOccurs="0"/>
+			<xs:element name="bucket3Allowance" type="fixed144" minOccurs="0"/>
+			<xs:element name="points" type="xs:int" minOccurs="0"/>
+			<xs:element name="DaysOfWeek" type="DaysOfWeek" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PkgInvItems">
+		<xs:sequence>
+			<xs:element name="PkgInvItem" type="PkgInvItem" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PkgInvItem">
+		<xs:sequence>
+			<xs:element name="item" type="xs:string"/>
+			<xs:element name="quantity" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PkgDescriptions">
+		<xs:sequence>
+			<xs:element name="PkgDescription" type="PkgDescription" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PkgDescription">
+		<xs:sequence>
+			<xs:element name="languageID" type="xs:string"/>
+			<xs:element name="packageDescription" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PkgShortDescriptions">
+		<xs:sequence>
+			<xs:element name="PkgShortDescription" type="PkgShortDescription" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PkgShortDescription">
+		<xs:sequence>
+			<xs:element name="languageID" type="xs:string"/>
+			<xs:element name="shortDescription" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PackageTieredDetails">
+		<xs:sequence>
+			<xs:element name="PackageTieredDetail" type="PackageTieredDetail" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PackageTieredDetail">
+		<xs:sequence>
+			<xs:element name="PackageDetail" type="PackageDetail"/>
+		</xs:sequence>
+		<xs:attribute name="minimumNights" type="xs:int" use="optional"/>
+		<xs:attribute name="maximumNights" type="xs:int" use="optional"/>
+		<xs:attribute name="minimumPersons" type="xs:int" use="optional"/>
+		<xs:attribute name="maximumPersons" type="xs:int" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="PkgLongInfos">
+		<xs:sequence>
+			<xs:element name="pkgLongInfo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="InactivePackageDetails">
+		<xs:sequence>
+			<xs:element name="PackageTieredDetail" type="PackageTieredDetail" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

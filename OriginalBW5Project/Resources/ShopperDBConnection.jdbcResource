@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_EzDVgqysEei9SPzGyZrB4Q" name="Resources.ShopperDBConnection" type="jdbc:JdbcDataSource">
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_EzDVg6ysEei9SPzGyZrB4Q" username="%%DBCONNECTION/Shopper/User%%" password="%%DBCONNECTION/Shopper/Password%%">
+    <substitutionBindings xmi:id="_EzDVhKysEei9SPzGyZrB4Q" template="maxConnections" propName="DBCONNECTION/Shopper/MaxConnections0"/>
+    <substitutionBindings xmi:id="_EzDVhaysEei9SPzGyZrB4Q" template="maxConnections" propName="Conn"/>
+    <substitutionBindings xmi:id="_EzDVi6ysEei9SPzGyZrB4Q" template="username" propName="DBCONNECTION/Shopper/User"/>
+    <substitutionBindings xmi:id="_EzDVjKysEei9SPzGyZrB4Q" template="password" propName="DBCONNECTION/Shopper/Password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_EzDVhqysEei9SPzGyZrB4Q" jdbcDriver="%%DBCONNECTION/Shopper/Driver%%" dbURL="%%DBCONNECTION/Shopper/URL%%">
+      <substitutionBindings xmi:id="_EzDVh6ysEei9SPzGyZrB4Q" template="loginTimeout" propName="DBCONNECTION/Shopper/Timeout0"/>
+      <substitutionBindings xmi:id="_EzDViKysEei9SPzGyZrB4Q" template="loginTimeout" propName="Timeout"/>
+      <substitutionBindings xmi:id="_EzDViaysEei9SPzGyZrB4Q" template="jdbcDriver" propName="DBCONNECTION/Shopper/Driver"/>
+      <substitutionBindings xmi:id="_EzDViqysEei9SPzGyZrB4Q" template="dbURL" propName="DBCONNECTION/Shopper/URL"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>

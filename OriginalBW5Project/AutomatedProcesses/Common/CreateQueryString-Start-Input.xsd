@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="/OriginalBW5Project/AutomatedProcesses/Common/CreateQueryString-Start-Input.xsd" xmlns:ns="http://www.tibco.com/pe/DeployedVarsType" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/OriginalBW5Project/AutomatedProcesses/Common/CreateQueryString-Start-Input.xsd">
+    <xsd:element name="root">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="0" name="InterfaceName" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="PropertyName" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="MessageType" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="TransactionId" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="Status" type="xsd:string"/>
+                <xsd:element minOccurs="0" name="Message" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

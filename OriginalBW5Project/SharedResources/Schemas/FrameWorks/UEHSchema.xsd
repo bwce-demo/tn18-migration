@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns="http://www.tibco.com/schemas/WyndhamTemplate/SharedResources/Schemas/FrameWorks/UEHSchema.xsd"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	 targetNamespace="http://www.tibco.com/schemas/WyndhamTemplate/SharedResources/Schemas/FrameWorks/UEHSchema.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+
+	<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Jahnavi Rao (Travel Automation Management) -->
+	<!-- Schema structure -->
+	<xsd:element name="Message">
+		<xsd:annotation>
+			<xsd:documentation>Defines all necessary information that for any exception message that will be sent to GEH. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="transaction" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="request" minOccurs="0"/>
+							<xsd:element ref="response" minOccurs="0"/>
+							<xsd:element ref="transDetailedTimestamps" minOccurs="0" maxOccurs="unbounded"/>
+						</xsd:sequence>
+						<xsd:attribute name="InternalId" type="xsd:string"/>
+						<xsd:attribute name="externalId" type="xsd:string"/>
+						<xsd:attribute name="transactionType" type="xsd:string"/>
+						<xsd:attribute name="batchNumber" type="xsd:string"/>
+						<xsd:attribute name="brandid" type="xsd:string"/>
+						<xsd:attribute name="propertyId" type="xsd:string"/>
+						<xsd:attribute name="languageCode" type="xsd:string"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="exceptionDetails" minOccurs="0">
+					<xsd:complexType>
+						<xsd:sequence minOccurs="0">
+							<xsd:element ref="source"/>
+							<xsd:element ref="destination"/>
+							<xsd:element ref="userDefinedElements" maxOccurs="unbounded"/>
+						</xsd:sequence>
+						<xsd:attribute name="errorType" type="xsd:string"/>
+						<xsd:attribute name="errorCode" type="xsd:string"/>
+						<xsd:attribute name="errorMsg" type="xsd:string"/>
+						<xsd:attribute name="notifyflag" type="xsd:string"/>
+						<xsd:attribute name="timestamp" type="xsd:string"/>
+						<xsd:attribute name="severity" type="xsd:string"/>
+						<xsd:attribute name="emailgroup" type="xsd:string"/>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="timestamp" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="UserDefinedElement">
+		<xsd:annotation>
+			<xsd:documentation>The elements of this element are name/value pair. The element "name" stands for the "CUSTOM_FIELD" name in the UEH EXCEPTION_MESSAGE table where the value of the "value" element  should be put in
+Refer to UEH documentation for details about the use of the User Defined elements.
+			
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="value" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="endpoint">
+		<xsd:sequence>
+			<xsd:element name="systemId" type="xsd:string"/>
+			<xsd:element name="systemVersion" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="channel" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="primary" minOccurs="0"/>
+						<xsd:element ref="secondary" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute name="channel" type="xsd:string"/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="hostname" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="endpoint1">
+		<xsd:sequence>
+			<xsd:element name="payload" type="xsd:string"/>
+			<xsd:element name="timestamp" type="xsd:string"/>
+			<xsd:element ref="payloadType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="source" type="endpoint"/>
+	<xsd:element name="destination" type="endpoint"/>
+	<xsd:element name="userDefinedElements" type="UserDefinedElement"/>
+	<xsd:element name="transDetailedTimestamps" type="UserDefinedElement"/>
+	<xsd:element name="request" type="endpoint1"/>
+	<xsd:element name="response" type="endpoint1"/>
+	<xsd:element name="hostname" type="xsd:string"/>
+	<xsd:element name="primary" type="xsd:string"/>
+	<xsd:element name="secondary" type="xsd:string"/>
+	<xsd:element name="type" type="xsd:string"/>
+	<xsd:element name="payloadType" type="xsd:string"/>
+</xsd:schema>
