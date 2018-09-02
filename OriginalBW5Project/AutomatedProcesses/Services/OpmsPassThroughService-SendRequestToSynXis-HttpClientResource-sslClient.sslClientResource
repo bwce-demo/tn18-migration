@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:keystore="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/cred/keystore" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmi:id="_KgWPg6ysEei9SPzGyZrB4Q" name="AutomatedProcesses.Services.OpmsPassThroughService-SendRequestToSynXis-HttpClientResource-sslClient" type="sslclient:SSLClientConfiguration">
-  <jndi:reference xmi:id="_KgWPhKysEei9SPzGyZrB4Q" key="trustStoreServiceProvider" type="keystore:KeystoreConfiguration" value="SharedResources.Schemas.TrustStore"/>
-  <jndi:configuration xsi:type="sslclient:SSLClientConfiguration" xmi:id="_KgWPhaysEei9SPzGyZrB4Q" sslCipherStrength="AtLeast256Bit"/>
-</jndi:namedResource>

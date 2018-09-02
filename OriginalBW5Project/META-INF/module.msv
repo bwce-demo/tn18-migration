@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<msv:DocumentRoot xmlns:msv="http://tns.tibco.com/bw/model/core/moduleSV">
-  <moduleSharedVariables>
-    <moduleSharedVariable name="SharedParameters.PassThroughLookup" type="PropertyDestination" initialValueMode="none"/>
-  </moduleSharedVariables>
-  <import importType="http://www.w3.org/2001/XMLSchema" namespace="" location="../SharedResources/Schemas/PassThruDestination.xsd"/>
-</msv:DocumentRoot>
