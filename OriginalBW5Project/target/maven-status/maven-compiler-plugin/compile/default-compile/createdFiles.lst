@@ -1,0 +1,5 @@
+AutomatedProcesses\Common\CreditCardMask\CreditCardMaskAmfCreditCardMask.class
+AutomatedProcesses\Common\doEncryptNotif\doEncryptNotifdeEncode.class
+AutomatedProcesses\Common\doEncryptNotif\GetModuleProperty.class
+AutomatedProcesses\Common\CreditCardMask\CreditCardMaskCreditCardMask.class
+AutomatedProcesses\Common\doEncryptNotif\doEncryptNotifEncryptData.class

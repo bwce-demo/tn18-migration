@@ -1,0 +1,29 @@
+Manifest-Version: 1.0.0.201809021203
+Bundle-SymbolicName: OriginalBW5Project
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwcf
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.pal
+ ette; filter:="(name=bw.jdbc)",com.tibco.bw.palette; filter:="(name=b
+ w.java)",com.tibco.bw.palette; filter:="(name=bw.jms)",com.tibco.bw.p
+ alette; filter:="(name=bw.xml)",com.tibco.bw.palette; filter:="(name=
+ bw.http)",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpcl
+ ient)",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconne
+ ctor)",com.tibco.bw.sharedresource.model; filter:="(name=bw.jdbc)",co
+ m.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)",co
+ m.tibco.bw.sharedresource.model; filter:="(name=bw.cred)",com.tibco.b
+ w.sharedresource.model; filter:="(name=bw.sslclient)"
+Import-Package: com.tibco.bw.palette.shared.java;version="6.2.600",com
+ .tibco.bw.runtime;version="6.3.600"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 6.5.0 HFEB1 V67 2018-08-30
+Export-Package: AutomatedProcesses.Common.CreditCardMask,AutomatedProc
+ esses.Common.doEncryptNotif
+Bundle-Name: OriginalBW5Project
+Bundle-Version: 1.0.0.201809021203
+Bundle-ClassPath: lib/IngrianNAE-5.0.0.jar,.,.
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+
