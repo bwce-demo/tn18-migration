@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/PMSPASSTHRU/SharedResources/Schemas/Schema.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/PMSPASSTHRU/SharedResources/Schemas/Schema.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Resultsets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ResultSet1" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResultSet1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Record1" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Record1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BRAND_ID" minOccurs="0"/>
+				<xs:element ref="PROPERTY_ID" minOccurs="0"/>
+				<xs:element ref="TWI_PASS_THRU" minOccurs="0"/>
+				<xs:element ref="CREATED_BY" minOccurs="0"/>
+				<xs:element ref="CREATED_TS" minOccurs="0"/>
+				<xs:element ref="UPDATED_BY" minOccurs="0"/>
+				<xs:element ref="UPDATED_TS" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BRAND_ID" type="xs:string"/>
+	<xs:element name="PROPERTY_ID" type="xs:string"/>
+	<xs:element name="TWI_PASS_THRU" type="xs:string"/>
+	<xs:element name="CREATED_BY" type="xs:string"/>
+	<xs:element name="CREATED_TS" type="xs:string"/>
+	<xs:element name="UPDATED_BY" type="xs:string"/>
+	<xs:element name="UPDATED_TS" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_EvBxIqysEei9SPzGyZrB4Q" name="Resources.MQDBConnection" type="jdbc:JdbcDataSource">
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_EvBxI6ysEei9SPzGyZrB4Q" username="%%DBCONNECTION/MQDB/User%%" password="%%DBCONNECTION/MQDB/Password%%">
+    <substitutionBindings xmi:id="_EvBxJKysEei9SPzGyZrB4Q" template="maxConnections" propName="DBCONNECTION/MQDB/MaxConnections0"/>
+    <substitutionBindings xmi:id="_EvBxJaysEei9SPzGyZrB4Q" template="maxConnections" propName="Conn"/>
+    <substitutionBindings xmi:id="_EvBxK6ysEei9SPzGyZrB4Q" template="username" propName="DBCONNECTION/MQDB/User"/>
+    <substitutionBindings xmi:id="_EvBxLKysEei9SPzGyZrB4Q" template="password" propName="DBCONNECTION/MQDB/Password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_EvBxJqysEei9SPzGyZrB4Q" jdbcDriver="%%DBCONNECTION/MQDB/Driver%%" dbURL="%%DBCONNECTION/MQDB/URL%%">
+      <substitutionBindings xmi:id="_EvBxJ6ysEei9SPzGyZrB4Q" template="loginTimeout" propName="DBCONNECTION/MQDB/Timeout0"/>
+      <substitutionBindings xmi:id="_EvBxKKysEei9SPzGyZrB4Q" template="loginTimeout" propName="Timeout"/>
+      <substitutionBindings xmi:id="_EvBxKaysEei9SPzGyZrB4Q" template="jdbcDriver" propName="DBCONNECTION/MQDB/Driver"/>
+      <substitutionBindings xmi:id="_EvBxKqysEei9SPzGyZrB4Q" template="dbURL" propName="DBCONNECTION/MQDB/URL"/>
+    </connectionConfig>
+  </jndi:configuration>
+</jndi:namedResource>

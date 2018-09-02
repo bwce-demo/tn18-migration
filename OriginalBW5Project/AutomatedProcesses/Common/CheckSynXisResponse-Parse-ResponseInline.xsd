@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ns="http://schemas.tibco.com/bw/plugins/xml/5.0/xmlExceptions" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:tns="/AutomatedProcesses/Common/CheckSynXisResponse.process/Parse-Response" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="/AutomatedProcesses/Common/CheckSynXisResponse.process/Parse-Response">
+    <xsd:element name="root" type="xsd:string"/>
+</xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="PropertyDestination">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PropertyRecord" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BRAND_ID" type="xs:string"/>
+							<xs:element name="PROPERTY_ID" type="xs:string"/>
+							<xs:element name="TWI_PASS_THRU" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

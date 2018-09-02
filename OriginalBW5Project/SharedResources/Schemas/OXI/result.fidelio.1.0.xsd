@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="result.fidelio.1.0" xmlns="result.fidelio.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="RESULT" type = "RESULT">
+		<xs:annotation>
+			<xs:documentation>RESULT schema</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="RESULT">
+		<xs:sequence>
+			<xs:element name="resortId" type="xs:string"/>
+			<xs:element name="resultMessage" type="xs:string" minOccurs="0"/>
+			<xs:element name="ResultIds" type="ResultIds" minOccurs="0"/>
+			<xs:element name="LegQuery" type="LegQuery" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="success" type="success" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="success">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SUCCESS"/>
+			<xs:enumeration value="SUCCESSINFO"/>
+			<xs:enumeration value="WARNING"/>
+			<xs:enumeration value="FAIL"/>
+			<xs:enumeration value="REQUEUE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ResultIds">
+		<xs:sequence>
+			<xs:element name="ResultId" type="ResultId" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResultId">
+		<xs:sequence>
+			<xs:element name="crsId" type="xs:string" minOccurs="0"/>
+			<xs:element name="pmsId" type="xs:string" minOccurs="0"/>
+			<xs:element name="shareNum" type="xs:string" minOccurs="0"/>
+			<xs:element name="shareId" type="xs:string" minOccurs="0"/>
+			<xs:element name="legNumbers" type="xs:string" minOccurs="0"/>
+			<xs:element name="memberNr" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="resultMsgType" type="resultMsgType" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="resultMsgType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PROFILE"/>
+			<xs:enumeration value="ALLOTMENT"/>
+			<xs:enumeration value="RATEHEADER"/>
+			<xs:enumeration value="RATEDETAIL"/>
+			<xs:enumeration value="RATEAVAIL"/>
+			<xs:enumeration value="RATEAVLRT"/>
+			<xs:enumeration value="PACKAGE"/>
+			<xs:enumeration value="RATE"/>
+			<xs:enumeration value="RESERVATION"/>
+			<xs:enumeration value="INVENTORY"/>
+			<xs:enumeration value="CCOMMENT"/>
+			<xs:enumeration value="HURDLE"/>
+			<xs:enumeration value="UDFDEFINITION"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="LegQuery">
+		<xs:sequence>
+			<xs:element name="crsId" type="xs:string" minOccurs="0"/>
+			<xs:element name="legNumbers" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

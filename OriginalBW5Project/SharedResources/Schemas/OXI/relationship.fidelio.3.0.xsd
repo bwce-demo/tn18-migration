@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="relationship.fidelio.3.0" xmlns="relationship.fidelio.3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Relationship" type = "Relationship">
+		<xs:annotation>
+			<xs:documentation>Relationship schema</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Relationship">
+		<xs:sequence>
+			<xs:element name="Relations" type="Relations"/>
+		</xs:sequence>
+		<xs:attribute name="sourceSystem" type="xs:string" use="optional"/>
+		<xs:attribute name="destinationSystem" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="Relations">
+		<xs:sequence>
+			<xs:element name="Relation" type="Relation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Relation">
+		<xs:sequence>
+			<xs:element name="objectType" type="xs:string"/>
+			<xs:element name="objectSourceId" type="xs:string"/>
+			<xs:element name="objectDestId" type="xs:string" minOccurs="0"/>
+			<xs:element name="objectInfo" type="xs:string" minOccurs="0"/>
+			<xs:element name="relatedToObjectType" type="xs:string"/>
+			<xs:element name="relatedToObjectSourceId" type="xs:string"/>
+			<xs:element name="relatedToObjectDestId" type="xs:string" minOccurs="0"/>
+			<xs:element name="relatedToObjectInfo" type="xs:string" minOccurs="0"/>
+			<xs:element name="primaryRelation" type="xs:boolean"/>
+			<xs:element name="relationDescription" type="xs:string" minOccurs="0"/>
+			<xs:element name="HotelReference" type="HotelReference"/>
+		</xs:sequence>
+		<xs:attribute name="relation" type="xs:string" use="required"/>
+		<xs:attribute name="mfInactiveDate" type="xs:dateTime" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="HotelReference">
+		<xs:sequence>
+			<xs:element name="chainCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="hotelCode" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

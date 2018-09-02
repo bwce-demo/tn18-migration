@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Sreenath (Moxie) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/TWI-PMNotification/SharedResources/Schemas/Internal/Schema.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/TWI-PMNotification/SharedResources/Schemas/Internal/Schema.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Staging">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SEQ_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="BRAND_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="PROP_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="MSG_TYPE_CODE" type="xs:string" minOccurs="0"/>
+				<xs:element name="CREATE_TIME_STAMP" type="xs:string" minOccurs="0"/>
+				<xs:element name="LASTUPDATE_TIME_STAMP" type="xs:string" minOccurs="0"/>
+				<xs:element ref="CREATE_ID" minOccurs="0"/>
+				<xs:element ref="LAST_UPDATE_ID" minOccurs="0"/>
+				<xs:element name="MESSAGE_STATUS" type="xs:string" minOccurs="0"/>
+				<xs:element name="RETRY_COUNT" type="xs:string" minOccurs="0"/>
+				<xs:element name="TIMEOUT_COUNT" type="xs:string" minOccurs="0"/>
+				<xs:element name="PM_TYPE" type="xs:string" minOccurs="0"/>
+				<xs:element name="ERROR_CODE" type="xs:string" minOccurs="0"/>
+				<xs:element name="ACK_TIME_STAMP" type="xs:string" minOccurs="0"/>
+				<xs:element name="ASL_XML" type="xs:string" minOccurs="0"/>
+				<xs:element name="PMNOTIF_XML" type="xs:string" minOccurs="0"/>
+				<xs:element name="LGCY_SEQ_ID" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ACK_XML" minOccurs="0"/>
+				<xs:element ref="REQ_XML" minOccurs="0"/>
+				<xs:element ref="RESP_XML" minOccurs="0"/>
+				<xs:element ref="RESP_ACK_XML" minOccurs="0"/>
+				<xs:element ref="TRANS_TYPE_DESC" minOccurs="0"/>
+				<xs:element ref="ERRORMSG" minOccurs="0"/>
+				<xs:element name="P_GNR_NUMBER" type="xs:string" minOccurs="0"/>
+				<xs:element ref="GRP_BLCK_CD" minOccurs="0"/>
+				<xs:element ref="DELIVERY_METHOD" minOccurs="0"/>
+				<xs:element ref="INBOUND_SEQ_NBR" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ACK_XML" type="xs:string"/>
+	<xs:element name="REQ_XML" type="xs:string"/>
+	<xs:element name="RESP_XML" type="xs:string"/>
+	<xs:element name="RESP_ACK_XML" type="xs:string"/>
+	<xs:element name="CreateID" type="xs:string"/>
+	<xs:element name="LastUpdateID" type="xs:string"/>
+	<xs:element name="TRANS_TYPE_DESC" type="xs:string"/>
+	<xs:element name="CREATE_ID" type="xs:string"/>
+	<xs:element name="LAST_UPDATE_ID" type="xs:string"/>
+	<xs:element name="ERRORMSG" type="xs:string"/>
+	<xs:element name="GRP_BLCK_CD" type="xs:string"/>
+	<xs:element name="DELIVERY_METHOD" type="xs:string"/>
+	<xs:element name="INBOUND_SEQ_NBR" type="xs:string"/>
+</xs:schema>
