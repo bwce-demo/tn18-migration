@@ -459,7 +459,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//OriginalBW5Project//EMSCONNECTION/URL</name>
-			<value>tcp://localhost:7222</value>
+			<value>tcp://35.171.94.46:7222</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
