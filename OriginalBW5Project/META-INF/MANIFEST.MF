@@ -3,7 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: OriginalBW5Project
 Bundle-SymbolicName: OriginalBW5Project
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: lib/IngrianNAE-5.0.0.jar,.,.
+Bundle-ClassPath: lib/IngrianNAE-5.0.0.jar,
+ .,
+ .
 Bundle-Vendor: TIBCO Software Inc.
 Export-Package: AutomatedProcesses.Common.CreditCardMask,
  AutomatedProcesses.Common.doEncryptNotif
